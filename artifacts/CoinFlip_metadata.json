@@ -1,0 +1,242 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "NoFunds",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "NotOwner",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "TransferFailed",
+				"type": "error"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "FundsWithdrawn",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "player",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "playerChoice",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "result",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "bool",
+						"name": "won",
+						"type": "bool"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "gameNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "GamePlayed",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "getContractBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address payable",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bool",
+						"name": "_choice",
+						"type": "bool"
+					}
+				],
+				"name": "play",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalGamesPlayed",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "Demo amaçlı; üretimde rastgelelik için VRF kullanın (Chainlink vb.)",
+			"kind": "dev",
+			"methods": {
+				"play(bool)": {
+					"params": {
+						"_choice": "true = Yazı (Heads), false = Tura (Tails)"
+					}
+				}
+			},
+			"title": "CoinFlip - Ücretsiz (sadece gas) Yazı-Tura (geliştirilmiş)",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"getContractBalance()": {
+					"notice": "Kontrat bakiyesi"
+				},
+				"play(bool)": {
+					"notice": "Yazı-tura oyna (ücretsiz: sadece gas)"
+				},
+				"transferOwnership(address)": {
+					"notice": "Sahip değişikliği"
+				},
+				"withdraw()": {
+					"notice": "Owner sadece çekebilir (bağışlar için)"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FlipFlop.sol": "CoinFlip"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/FlipFlop.sol": {
+			"keccak256": "0x7ac518c617e8ca21e740847b740682336fcd7698162719e402e31608ea33cef4",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a624712d52152900c0d41d8093900578f52c7f85d4b881fc6c790f4e06cbbd5a",
+				"dweb:/ipfs/QmfZu8nJJWkJB1LYPTJYFmrZNcjqpj4VPanPaXYhqxhDfg"
+			]
+		}
+	},
+	"version": 1
+}
