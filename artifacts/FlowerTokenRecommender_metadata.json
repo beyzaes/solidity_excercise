@@ -1,0 +1,211 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "tokenName",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "luckFactor",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "recommendedAt",
+						"type": "uint256"
+					}
+				],
+				"name": "TokenRecommended",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "getAllTokens",
+				"outputs": [
+					{
+						"internalType": "string[12]",
+						"name": "",
+						"type": "string[12]"
+					},
+					{
+						"internalType": "string[12]",
+						"name": "",
+						"type": "string[12]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "wallet",
+						"type": "address"
+					}
+				],
+				"name": "getRecommendation",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "tokenName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "luckFactor",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "recommendedAt",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FlowerTokenRecommender.TokenRecommendation",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "recommendToken",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "tokenName",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "luckFactor",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "recommendedAt",
+								"type": "uint256"
+							}
+						],
+						"internalType": "struct FlowerTokenRecommender.TokenRecommendation",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "recommendations",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "tokenName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "luckFactor",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "recommendedAt",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/FlowerTokenRecommender.sol": "FlowerTokenRecommender"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/FlowerTokenRecommender.sol": {
+			"keccak256": "0xae0b36a66e3938ea2b651fcd3b52a8007473303d7a346b03cde1e3cb4efa4ef7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cfea4f6b660f3796f0c1addebde2da1b973dc4d6ecab97d8b3fc7f13ae773b50",
+				"dweb:/ipfs/QmbqCYJYtFYivGjTDaaCGo4C4UMzKHBJxh8eeeJtM9mtHD"
+			]
+		}
+	},
+	"version": 1
+}
